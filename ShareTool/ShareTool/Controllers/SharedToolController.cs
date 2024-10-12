@@ -20,5 +20,9 @@ namespace ShareTool.Controllers
                 new SharedTool("كمبيوتر","كمبيوتر بمعالج i5 بحالة جيدة",0),
             });
         }
+
+        public ActionResult RequestTool() {
+            return Content("تم ظلب الأداة");
+        }
     }
 }
