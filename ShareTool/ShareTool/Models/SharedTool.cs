@@ -7,6 +7,10 @@ namespace ShareTool.Models
 {
     public class SharedTool
     {
+        public SharedTool()
+        {
+        }
+
         public SharedTool(string name, string description, int quantity)
         {
             Name = name;
