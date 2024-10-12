@@ -12,6 +12,14 @@
     <title>Index</title>
 </head>
 <body>
+    <h2>@DateTime.Now.ToShortTimeString()</h2>
+    @{
+        var title = "أدوات متوفرة للمشاركة :";
+        <h3>@title @Model.Count()</h3>
+        @title @title
+        <text> هنا تجد الكثير من الأدوات التي تحتاجها بشكل يومي </text>
+    }
+
     <p>
         @Html.ActionLink("Create New", "Create")
     </p>
@@ -28,26 +36,38 @@
             </th>
             <th></th>
         </tr>
-    
-    @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Quantity)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-    }
-    
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @if (item.Quantity == 0)
+                    {
+                        <text>إنتظر حتى يتم إعادة هذه الأداة</text>
+                    }
+                    else if (item.Quantity == 1)
+                    {
+                        <text>سارع بالظلب إن كنت بحاجة لها</text>
+                    }
+                    else
+                    {
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    }
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+
     </table>
 </body>
 </html>
