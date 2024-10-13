@@ -20,7 +20,6 @@ namespace ShareTool.Controllers
         // GET: Sharedtool
         public ActionResult Index()
         {
-            throw new NotImplementedException();
             ViewBag.UserName = "نجم الدين";
             ViewData["FirstName"] = "نجم الدين";
             TempData["HeyMessage"] = "مرحبا";
