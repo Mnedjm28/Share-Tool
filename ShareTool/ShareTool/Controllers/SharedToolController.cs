@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace ShareTool.Controllers
 {
+    [HandleError]
     public class SharedToolController : Controller
     {
         public List<SharedTool> sharedTools = new List<SharedTool>()
@@ -19,12 +20,14 @@ namespace ShareTool.Controllers
         // GET: Sharedtool
         public ActionResult Index()
         {
+            throw new NotImplementedException();
             ViewBag.UserName = "نجم الدين";
             ViewData["FirstName"] = "نجم الدين";
             TempData["HeyMessage"] = "مرحبا";
             return View(sharedTools);
         }
 
+        //[HandleError] //Could handle errors only in this action
         public ActionResult Create() {
             var heyMessage = "";
             if(TempData.ContainsKey("HeyMessage"))
