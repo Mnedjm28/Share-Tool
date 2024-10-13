@@ -12,10 +12,10 @@ namespace ShareTool.Controllers
     {
         public List<SharedTool> sharedTools = new List<SharedTool>()
             {
-                new SharedTool("غسالة","غسالة مستعملة بحالة مية بالمية",1),
-                new SharedTool("دراجة","دراجة هوائية كبيرة الحجم يمكن استخدامه ",4),
-                new SharedTool("تلفاز","تلفاز مكسور النصف العلوي من شاشته",2),
-                new SharedTool("كمبيوتر","كمبيوتر بمعالج i5 بحالة جيدة",0),
+                new SharedTool("غسالة","غسالة مستعملة بحالة مية بالمية", 1, "/Images/washingMachine.jpg"),
+                new SharedTool("دراجة","دراجة هوائية كبيرة الحجم يمكن استخدامه ", 4, "/Images/bicycle.png"),
+                new SharedTool("تلفاز","تلفاز مكسور النصف العلوي من شاشته", 2, "/Images/lcd.jpg"),
+                new SharedTool("كمبيوتر","كمبيوتر بمعالج i5 بحالة جيدة", 0, "/Images/laptop.jpg"),
             };
         // GET: Sharedtool
         public ActionResult Index()
