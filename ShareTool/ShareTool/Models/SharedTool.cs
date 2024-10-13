@@ -12,11 +12,12 @@ namespace ShareTool.Models
         {
         }
 
-        public SharedTool(string name, string description, int quantity)
+        public SharedTool(string name, string description, int quantity, string imagePath)
         {
             Name = name;
             Description = description;
             Quantity = quantity;
+            ImagePath = imagePath;
         }
 
         [Required(ErrorMessage="هذا الحقل إجباري")]
@@ -26,5 +27,7 @@ namespace ShareTool.Models
 
         [Required(ErrorMessage = "هذا الحقل إجباري")]
         public int Quantity { get; set; }
+
+        public string ImagePath { get; set; }
     }
 }
