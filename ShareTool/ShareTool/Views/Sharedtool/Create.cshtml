@@ -1,7 +1,7 @@
 ﻿@model ShareTool.Models.SharedTool
 
 @{
-    Layout = null;
+    //Layout = null;
 }
 
 <!DOCTYPE html>
@@ -12,6 +12,7 @@
     <title>Create</title>
 </head>
 <body>
+    @TempData["HeyMessage"]
     @using (Html.BeginForm()) 
     {
         @Html.AntiForgeryToken()

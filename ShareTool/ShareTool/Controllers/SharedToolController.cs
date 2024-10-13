@@ -19,10 +19,18 @@ namespace ShareTool.Controllers
         // GET: Sharedtool
         public ActionResult Index()
         {
+            ViewBag.UserName = "نجم الدين";
+            ViewData["FirstName"] = "نجم الدين";
+            TempData["HeyMessage"] = "مرحبا";
             return View(sharedTools);
         }
 
         public ActionResult Create() {
+            var heyMessage = "";
+            if(TempData.ContainsKey("HeyMessage"))
+                heyMessage= TempData["HeyMessage"].ToString();
+
+            TempData.Keep();
             return View();
         }
 

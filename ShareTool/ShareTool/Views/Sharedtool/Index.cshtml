@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<ShareTool.Models.SharedTool>
 
 @{
-    Layout = null;
+    //Layout = null;
 }
 
 <!DOCTYPE html>
@@ -12,6 +12,9 @@
     <title>Index</title>
 </head>
 <body>
+    @ViewBag.UserName
+
+    @ViewData["FirstName"]
     <h2>@DateTime.Now.ToShortTimeString()</h2>
     @{
         var title = "أدوات متوفرة للمشاركة :";
