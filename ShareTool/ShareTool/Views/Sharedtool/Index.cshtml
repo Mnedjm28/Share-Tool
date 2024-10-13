@@ -24,7 +24,7 @@
     }
 
     <p>
-        @Html.ActionLink("Create New", "Create")
+        @Html.ActionLink(Resources.ShareToolResource.CreateNew, "Create")
     </p>
     <table class="table">
         <tr>
@@ -64,12 +64,12 @@
                     }
                 </td>
                 <td>
-                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink(Resources.ShareToolResource.Edit, "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink(Resources.ShareToolResource.Details, "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { /* id=item.PrimaryKey */ }) |
                     @if (item.Quantity != 0)
                     {
-                        @Html.ActionLink("Request", "RequestTool", new { /* id=item.PrimaryKey */ })
+                        @Html.ActionLink(Resources.ShareToolResource.Request, "RequestTool", new { /* id=item.PrimaryKey */ })
                     }
 
                 </td>
