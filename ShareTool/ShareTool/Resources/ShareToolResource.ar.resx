@@ -144,6 +144,9 @@
   <data name="FieldRequired" xml:space="preserve">
     <value>هذا الحقل مطلوب.</value>
   </data>
+  <data name="Footer" xml:space="preserve">
+    <value>تم تطويره من قبل أحمد نجم الدين</value>
+  </data>
   <data name="Hello" xml:space="preserve">
     <value>مرحبا</value>
   </data>

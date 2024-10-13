@@ -144,6 +144,9 @@
   <data name="FieldRequired" xml:space="preserve">
     <value>This field is required.</value>
   </data>
+  <data name="Footer" xml:space="preserve">
+    <value>Developed by NEDJM EDDINE AHMED</value>
+  </data>
   <data name="Hello" xml:space="preserve">
     <value>Hello</value>
   </data>
