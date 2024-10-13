@@ -138,7 +138,13 @@
   <data name="Hello" xml:space="preserve">
     <value>مرحبا</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
   <data name="Request" xml:space="preserve">
     <value>أطلب</value>
+  </data>
+  <data name="ShareTool" xml:space="preserve">
+    <value>شارك أداة</value>
   </data>
 </root>

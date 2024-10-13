@@ -138,7 +138,13 @@
   <data name="Hello" xml:space="preserve">
     <value>Hello</value>
   </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
   <data name="Request" xml:space="preserve">
     <value>Request</value>
+  </data>
+  <data name="ShareTool" xml:space="preserve">
+    <value>Share Tool</value>
   </data>
 </root>
