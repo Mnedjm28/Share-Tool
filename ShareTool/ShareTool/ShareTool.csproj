@@ -181,6 +181,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Sharedtool\Index.cshtml" />
     <Content Include="Views\Sharedtool\Create.cshtml" />
+    <Content Include="Views\Shared\_CustomLayout.cshtml" />
+    <Content Include="Views\Shared\_NavBar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
