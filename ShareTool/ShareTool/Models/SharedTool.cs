@@ -20,12 +20,12 @@ namespace ShareTool.Models
             ImagePath = imagePath;
         }
 
-        [Required(ErrorMessage="هذا الحقل إجباري")]
+        [Required(ErrorMessageResourceType = typeof(Resources.ShareToolResource), ErrorMessageResourceName = "FieldRequired")]
         public string Name { get; set; }
 
         public string Description { get; set; }
 
-        [Required(ErrorMessage = "هذا الحقل إجباري")]
+        [Required(ErrorMessageResourceType = typeof(Resources.ShareToolResource), ErrorMessageResourceName = "FieldRequired")]
         public int Quantity { get; set; }
 
         public string ImagePath { get; set; }
