@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShareTool", "ShareTool\ShareTool.csproj", "{7AA1FE21-D718-47D2-9F7D-B86D8D36545D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedTool.DAL", "SharedTool.DAL\SharedTool.DAL.csproj", "{6DFBDE34-EFAD-4700-8072-F1254A79B92B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7AA1FE21-D718-47D2-9F7D-B86D8D36545D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7AA1FE21-D718-47D2-9F7D-B86D8D36545D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7AA1FE21-D718-47D2-9F7D-B86D8D36545D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DFBDE34-EFAD-4700-8072-F1254A79B92B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DFBDE34-EFAD-4700-8072-F1254A79B92B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DFBDE34-EFAD-4700-8072-F1254A79B92B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DFBDE34-EFAD-4700-8072-F1254A79B92B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
