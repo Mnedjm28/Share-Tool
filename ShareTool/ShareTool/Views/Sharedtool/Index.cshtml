@@ -20,14 +20,10 @@
     </style>
 </head>
 <body>
-    @ViewBag.UserName
-
-    @ViewData["FirstName"]
     <h2>@DateTime.Now.ToShortTimeString()</h2>
     @{
         var title = "أدوات متوفرة للمشاركة :";
         <h3>@title @Model.Count()</h3>
-        @title @title
         <text> هنا تجد الكثير من الأدوات التي تحتاجها بشكل يومي </text>
     }
 
@@ -41,7 +37,7 @@
                 <div class="col-md-12">
                     <img src="@item.ImagePath" />
                 </div>
-                <p>@Html.DisplayFor(modelItem => item.Name)</p>
+                <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
 
                 <p>@Html.DisplayFor(modelItem => item.Description)</p>
 
@@ -50,9 +46,10 @@
                 <p>
                     @Html.ActionLink(Resources.ShareToolResource.Edit, "Edit", new { /* id=item.PrimaryKey */ }) |
                     @Html.ActionLink(Resources.ShareToolResource.Details, "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { /* id=item.PrimaryKey */ }) 
                     @if (item.Quantity != 0)
                     {
+                        <span>|</span>
                         @Html.ActionLink(Resources.ShareToolResource.Request, "RequestTool", new { /* id=item.PrimaryKey */ })
                     }
                 </p>
