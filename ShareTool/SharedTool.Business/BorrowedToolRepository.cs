@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Share.Business
+namespace SharedTool.Business
 {
    public class BorrowedToolRepository
     {
