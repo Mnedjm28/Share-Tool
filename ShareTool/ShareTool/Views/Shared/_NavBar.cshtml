@@ -11,6 +11,7 @@
                 <li>@Html.ActionLink(Resources.ShareToolResource.AboutUs, "Index", "SharedTool", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink(Resources.ShareToolResource.ContactUs, "Index", "SharedTool", new { area = "" }, new { @class = "nav-link" })</li>
             </ul>
+            @Html.Partial("_LoginPartial")
         </div>
     </div>
 </nav>

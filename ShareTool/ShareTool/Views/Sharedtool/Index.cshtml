@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ShareTool.Models.SharedTool>
+﻿@model IEnumerable<SharedTool.DAL.Tool>
 
 @{
     //Layout = null;
@@ -27,15 +27,19 @@
         <text> هنا تجد الكثير من الأدوات التي تحتاجها بشكل يومي </text>
     }
 
-    <p>
-        @Html.ActionLink(Resources.ShareToolResource.CreateNew, "Create")
-    </p>
+    @if (Request.IsAuthenticated && User.IsInRole("Admin"))
+    {
+        <p>
+
+            @Html.ActionLink(Resources.ShareToolResource.CreateNew, "Create")
+        </p>
+    }
     <div class="row">
         @foreach (var item in Model)
         {
             <div class="col-md-6 text-center">
                 <div class="col-md-12">
-                    <img src="@item.ImagePath" />
+                    <img src="@item.ImageUrl" />
                 </div>
                 <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
 
@@ -44,14 +48,17 @@
                 <p>@Html.DisplayFor(modelItem => item.Quantity)</p>
 
                 <p>
-                    @Html.ActionLink(Resources.ShareToolResource.Edit, "Edit", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink(Resources.ShareToolResource.Details, "Details", new { /* id=item.PrimaryKey */ }) |
-                    @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { /* id=item.PrimaryKey */ }) 
-                    @if (item.Quantity != 0)
+                    @if (Request.IsAuthenticated)
                     {
-                        <span>|</span>
-                        @Html.ActionLink(Resources.ShareToolResource.Request, "RequestTool", new { /* id=item.PrimaryKey */ })
+                        if (User.IsInRole("Admin"))
+                        {
+                            @Html.ActionLink(Resources.ShareToolResource.Edit, "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-primary" })
+                            @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { id= item.Id  }, new { @class = "btn btn-outline-danger" })
+                        }
                     }
+
+                    @Html.ActionLink(Resources.ShareToolResource.Details, "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-secondary" })
+                    @Html.ActionLink(Resources.ShareToolResource.Request, "RequestTool", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-success" })
                 </p>
             </div>
         }

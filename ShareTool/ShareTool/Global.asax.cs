@@ -14,17 +14,31 @@ namespace ShareTool
     {
         protected void Application_Start()
         {
-            AreaRegistration.RegisterAllAreas();
-            FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
-            RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);
+            try
+            {
+                AreaRegistration.RegisterAllAreas();
+                FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
+                RouteConfig.RegisterRoutes(RouteTable.Routes);
+                BundleConfig.RegisterBundles(BundleTable.Bundles);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
 
         protected void Application_AcquireRequestState(object sender, EventArgs e)
         {
-            var culture = "ar";
-            Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
-            Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+            try
+            {
+                var culture = "ar";
+                Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
+                Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
     }
 }

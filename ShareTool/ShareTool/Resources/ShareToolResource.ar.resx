@@ -132,6 +132,9 @@
   <data name="CreateNew" xml:space="preserve">
     <value>إضافة جديد</value>
   </data>
+  <data name="CreateNewUser" xml:space="preserve">
+    <value>تسجيل كمستخدم جديد</value>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>حذف</value>
   </data>
@@ -143,6 +146,9 @@
   </data>
   <data name="Edit" xml:space="preserve">
     <value>تعديل</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>البريد الإلكتروني</value>
   </data>
   <data name="Errors.Error" xml:space="preserve">
     <value>خطأ</value>
@@ -162,11 +168,32 @@
   <data name="Home" xml:space="preserve">
     <value>الرئيسية</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>صورة</value>
+  </data>
+  <data name="LocalAccountToLogin" xml:space="preserve">
+    <value>استخدم حسابًا محليًا لتسجيل الدخول.</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>الإسم</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
   <data name="Quantity" xml:space="preserve">
     <value>الكمية</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>إنشاء حساب</value>
+  </data>
+  <data name="RememberMe" xml:space="preserve">
+    <value>تذكرنى</value>
   </data>
   <data name="Request" xml:space="preserve">
     <value>أطلب</value>
