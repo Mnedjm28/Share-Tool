@@ -31,7 +31,9 @@ namespace ShareTool
         {
             try
             {
-                var culture = "ar";
+                HttpCookie langCookie = Request.Cookies["Culture"];
+                string culture = langCookie != null ? langCookie.Value : "en"; 
+
                 Thread.CurrentThread.CurrentCulture = CultureInfo.GetCultureInfo(culture);
                 Thread.CurrentThread.CurrentUICulture = CultureInfo.GetCultureInfo(culture);
             }

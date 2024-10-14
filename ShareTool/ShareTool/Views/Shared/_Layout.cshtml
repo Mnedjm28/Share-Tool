@@ -9,14 +9,15 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
-    <style>
+<style>
         body {
+            /*direction:*/ @(System.Threading.Thread.CurrentThread.CurrentCulture.ToString() == "ar" ? "rtl" : "ltr")/*;*/
             direction: rtl;
             font-family: "Tajawal", sans-serif;
         }
-    </style>
+</style>
 </head>
-<body>
+<body style="direction: @(System.Threading.Thread.CurrentThread.CurrentCulture.ToString() == "ar" ? "rtl" : "ltr");">
     @Html.Partial("_NavBar")
     <div class="container body-content">
         @RenderBody()

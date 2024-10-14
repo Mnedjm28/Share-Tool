@@ -10,6 +10,15 @@
                 <li>@Html.ActionLink(Resources.ShareToolResource.Home, "Index", "SharedTool", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink(Resources.ShareToolResource.AboutUs, "Index", "SharedTool", new { area = "" }, new { @class = "nav-link" })</li>
                 <li>@Html.ActionLink(Resources.ShareToolResource.ContactUs, "Index", "SharedTool", new { area = "" }, new { @class = "nav-link" })</li>
+                @if (System.Threading.Thread.CurrentThread.CurrentCulture.ToString() == "ar")
+                {
+                    <li>@Html.ActionLink("أنجليزية", "ChangeCulture", "SharedTool", new { lang = "en" }, new { @class = "nav-link" })</li>
+                }
+                else
+                {
+                    <li>@Html.ActionLink("Arabic", "ChangeCulture", "SharedTool", new { lang = "ar" }, new { @class = "nav-link" })</li>
+                }
+
             </ul>
             @Html.Partial("_LoginPartial")
         </div>
