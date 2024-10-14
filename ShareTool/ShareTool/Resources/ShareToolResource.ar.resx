@@ -213,6 +213,12 @@
   <data name="RequestToolSuccessfuly" xml:space="preserve">
     <value>تم طلب الأداة بنجاح</value>
   </data>
+  <data name="SharedToolsHeader" xml:space="preserve">
+    <value>أدوات متوفرة للمشاركة :</value>
+  </data>
+  <data name="SharedToolsSupHeader" xml:space="preserve">
+    <value>هنا تجد الكثير من الأدوات التي تحتاجها بشكل يومي</value>
+  </data>
   <data name="ShareTool" xml:space="preserve">
     <value>شارك أداة</value>
   </data>

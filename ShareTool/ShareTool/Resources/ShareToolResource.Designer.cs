@@ -403,6 +403,24 @@ namespace Resources
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Tools available for sharing:.
+        /// </summary>
+        public static string SharedToolsHeader {
+            get {
+                return ResourceManager.GetString("SharedToolsHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Here you will find many tools that you need on a daily basis..
+        /// </summary>
+        public static string SharedToolsSupHeader {
+            get {
+                return ResourceManager.GetString("SharedToolsSupHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Share Tool.
         /// </summary>
         public static string ShareTool
