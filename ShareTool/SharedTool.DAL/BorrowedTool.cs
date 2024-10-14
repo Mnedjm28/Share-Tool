@@ -15,11 +15,11 @@ namespace SharedTool.DAL
     public partial class BorrowedTool
     {
         public int Id { get; set; }
-        public int UserId { get; set; }
+        public string UserId { get; set; }
         public int ToolId { get; set; }
         public System.DateTime Date { get; set; }
     
+        public virtual AspNetUser AspNetUser { get; set; }
         public virtual Tool Tool { get; set; }
-        public virtual User User { get; set; }
     }
 }
