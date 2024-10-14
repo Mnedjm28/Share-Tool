@@ -13,7 +13,15 @@ namespace SharedTool.Business
         public async Task<List<Tool>> GetAllTools()
         {
             var context = new SharedToolDb();
-            return await context.Tools.ToListAsync();
+
+            return (await context.Tools.ToListAsync()).Select(o => new Tool
+            {
+                Id = o.Id,
+                Name = o.Name,
+                Description = o.Description,
+                ImageUrl = o.ImageUrl,
+                Quantity = o.Quantity - o.BorrowedTools.Where(b => b.Approved).Count(),
+            }).ToList();
         }
 
         public async Task<Tool> GetToolById(int id)
