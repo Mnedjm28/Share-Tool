@@ -50,7 +50,7 @@ namespace ShareTool.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] /*FormCollection*/ Tool sharedTool , HttpPostedFileBase file)
+        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] /*FormCollection*/ Tool sharedTool, HttpPostedFileBase file)
         {
             if (!ModelState.IsValid) { return View(sharedTool); }
 
@@ -86,8 +86,8 @@ namespace ShareTool.Controllers
         [Authorize]
         public async Task<ActionResult> Delete(int id)
         {
-            var imageUrl =  await _toolRepository.Delete(id);
-            if(imageUrl != null)
+            var imageUrl = await _toolRepository.Delete(id);
+            if (imageUrl != null)
             {
                 imageUrl = imageUrl.Replace("/Images/", string.Empty);
                 System.IO.File.Delete(Path.Combine(Server.MapPath("~/Images"), imageUrl));
@@ -98,11 +98,18 @@ namespace ShareTool.Controllers
 
         [Authorize]
         public async Task<ActionResult> RequestTool(int id)
-        { 
-            var borrowRepo = new BorrowedToolRepository();
-            var borrowedTool = new BorrowedTool() { UserId = User.Identity.GetUserId(), ToolId = id, Date = DateTime.Now };
-            await borrowRepo.Add(borrowedTool);
-
+        {
+            try
+            {
+                var borrowRepo = new BorrowedToolRepository();
+                var borrowedTool = new BorrowedTool() { UserId = User.Identity.GetUserId(), ToolId = id, Date = DateTime.Now };
+                await borrowRepo.Add(borrowedTool);
+                TempData["SuccessMessage"] = Resources.ShareToolResource.RequestToolSuccessfuly;
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = ex.Message;
+            }
             return RedirectToAction("Index");
         }
     }

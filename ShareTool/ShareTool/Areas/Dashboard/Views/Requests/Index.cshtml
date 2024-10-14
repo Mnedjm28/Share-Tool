@@ -1,0 +1,68 @@
+﻿@model IEnumerable<SharedTool.DAL.BorrowedTool>
+
+@{
+    ViewBag.Title = Resources.ShareToolResource.ToolBorrowingRequests;
+}
+
+<h2>@Resources.ShareToolResource.ToolBorrowingRequests</h2>
+
+@if (@TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (@TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger" role="alert">
+        @TempData["ErrorMessage"]
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Resources.ShareToolResource.Date
+        </th>
+        <th>
+            @Resources.ShareToolResource.Approved
+        </th>
+        <th>
+            @Resources.ShareToolResource.Email
+        </th>
+        <th>
+            @Resources.ShareToolResource.ToolName
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Approved)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AspNetUser.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tool.Name)
+            </td>
+            <td>
+                @if (item.Approved)
+                {
+                    @Resources.ShareToolResource.Approved
+                }
+                else
+                {
+                    @Html.ActionLink(@Resources.ShareToolResource.ApproveIt, "ApproveBorrowingTool", new { id = item.Id }, new { @class = "btn btn-outline-dark" })
+                }
+            </td>
+        </tr>
+    }
+
+</table>
