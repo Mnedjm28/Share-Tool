@@ -73,6 +73,7 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserId" Type="nvarchar" MaxLength="128" Nullable="false" />
           <Property Name="ToolId" Type="int" Nullable="false" />
+          <Property Name="approved" Type="bit" Nullable="false" />
           <Property Name="Date" Type="date" Nullable="false" />
         </EntityType>
         <EntityType Name="Tool">
@@ -302,6 +303,7 @@
           <Property Name="Date" Type="DateTime" Nullable="false" Precision="0" />
           <NavigationProperty Name="AspNetUser" Relationship="SharedToolModel.FK_BorrowedTool_AspNetUsers" FromRole="BorrowedTool" ToRole="AspNetUser" />
           <NavigationProperty Name="Tool" Relationship="SharedToolModel.FK_BorrowedTool_Tool" FromRole="BorrowedTool" ToRole="Tool" />
+          <Property Name="approved" Type="Boolean" Nullable="false" />
         </EntityType>
         <EntityType Name="Tool">
           <Key>
@@ -434,6 +436,7 @@
           <EntitySetMapping Name="BorrowedTools">
             <EntityTypeMapping TypeName="SharedToolModel.BorrowedTool">
               <MappingFragment StoreEntitySet="BorrowedTool">
+                <ScalarProperty Name="approved" ColumnName="approved" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="ToolId" ColumnName="ToolId" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
