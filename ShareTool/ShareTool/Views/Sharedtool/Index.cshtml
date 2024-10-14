@@ -14,9 +14,9 @@
 </style>
 
 @{
-    var title = "أدوات متوفرة للمشاركة :";
+    var title = Resources.ShareToolResource.SharedToolsHeader;
     <h3>@title @Model.Count()</h3>
-    <text> هنا تجد الكثير من الأدوات التي تحتاجها بشكل يومي </text>
+    <text> @Resources.ShareToolResource.SharedToolsSupHeader </text>
 }
 
 @if (Request.IsAuthenticated && User.IsInRole("Admin"))
