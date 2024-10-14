@@ -12,6 +12,14 @@
         <AssociationConnector Association="SharedToolModel.FK_Address_User" ManuallyRouted="false" />
         <AssociationConnector Association="SharedToolModel.FK_BorrowedTool_Tool" ManuallyRouted="false" />
         <AssociationConnector Association="SharedToolModel.FK_BorrowedTool_User" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="SharedToolModel.C__MigrationHistory" Width="1.5" PointX="9.375" PointY="0.75" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetRole" Width="1.5" PointX="5.375" PointY="7.5" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetUserClaim" Width="1.5" PointX="9.875" PointY="6" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetUserLogin" Width="1.5" PointX="9.875" PointY="8.75" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetUser" Width="1.5" PointX="7.625" PointY="6.375" />
+        <AssociationConnector Association="SharedToolModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="SharedToolModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
+        <AssociationConnector Association="SharedToolModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
