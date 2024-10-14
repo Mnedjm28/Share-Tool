@@ -70,6 +70,24 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Approved.
+        /// </summary>
+        public static string Approved {
+            get {
+                return ResourceManager.GetString("Approved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Approve It.
+        /// </summary>
+        public static string ApproveIt {
+            get {
+                return ResourceManager.GetString("ApproveIt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Back to List.
         /// </summary>
         public static string BackToList {
@@ -111,6 +129,15 @@ namespace Resources {
         public static string CreateNewUser {
             get {
                 return ResourceManager.GetString("CreateNewUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Date.
+        /// </summary>
+        public static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
             }
         }
         
@@ -304,11 +331,56 @@ namespace Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The tool borrowing request has been successfully requested..
+        /// </summary>
+        public static string RequestToolAcceptedSuccessfuly {
+            get {
+                return ResourceManager.GetString("RequestToolAcceptedSuccessfuly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The tool has been successfully requested..
+        /// </summary>
+        public static string RequestToolSuccessfuly {
+            get {
+                return ResourceManager.GetString("RequestToolSuccessfuly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Share Tool.
         /// </summary>
         public static string ShareTool {
             get {
                 return ResourceManager.GetString("ShareTool", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Share tools.
+        /// </summary>
+        public static string ShareTools {
+            get {
+                return ResourceManager.GetString("ShareTools", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tool Borrowing Requests.
+        /// </summary>
+        public static string ToolBorrowingRequests {
+            get {
+                return ResourceManager.GetString("ToolBorrowingRequests", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tool name.
+        /// </summary>
+        public static string ToolName {
+            get {
+                return ResourceManager.GetString("ToolName", resourceCulture);
             }
         }
     }

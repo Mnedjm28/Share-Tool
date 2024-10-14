@@ -120,6 +120,12 @@
   <data name="AboutUs" xml:space="preserve">
     <value>About Us</value>
   </data>
+  <data name="Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="ApproveIt" xml:space="preserve">
+    <value>Approve It</value>
+  </data>
   <data name="BackToList" xml:space="preserve">
     <value>Back to List</value>
   </data>
@@ -134,6 +140,9 @@
   </data>
   <data name="CreateNewUser" xml:space="preserve">
     <value>Register as a new user</value>
+  </data>
+  <data name="Date" xml:space="preserve">
+    <value>Date</value>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
@@ -198,7 +207,22 @@
   <data name="Request" xml:space="preserve">
     <value>Request</value>
   </data>
+  <data name="RequestToolAcceptedSuccessfuly" xml:space="preserve">
+    <value>The tool borrowing request has been successfully requested.</value>
+  </data>
+  <data name="RequestToolSuccessfuly" xml:space="preserve">
+    <value>The tool has been successfully requested.</value>
+  </data>
   <data name="ShareTool" xml:space="preserve">
     <value>Share Tool</value>
+  </data>
+  <data name="ShareTools" xml:space="preserve">
+    <value>Share tools</value>
+  </data>
+  <data name="ToolBorrowingRequests" xml:space="preserve">
+    <value>Tool Borrowing Requests</value>
+  </data>
+  <data name="ToolName" xml:space="preserve">
+    <value>Tool name</value>
   </data>
 </root>
