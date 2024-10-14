@@ -168,6 +168,9 @@
   <data name="LogIn" xml:space="preserve">
     <value>تسجيل الدخول</value>
   </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
   <data name="Name" xml:space="preserve">
     <value>الإسم</value>
   </data>
