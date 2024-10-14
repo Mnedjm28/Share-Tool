@@ -1,5 +1,8 @@
-﻿using SharedTool.Business;
+﻿using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using SharedTool.Business;
 using SharedTool.DAL;
+using ShareTool.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -94,9 +97,13 @@ namespace ShareTool.Controllers
 
 
         [Authorize]
-        public ActionResult RequestTool()
-        {
-            return Content("تم ظلب الأداة");
+        public async Task<ActionResult> RequestTool(int id)
+        { 
+            var borrowRepo = new BorrowedToolRepository();
+            var borrowedTool = new BorrowedTool() { UserId = User.Identity.GetUserId(), ToolId = id, Date = DateTime.Now };
+            await borrowRepo.Add(borrowedTool);
+
+            return RedirectToAction("Index");
         }
     }
 }
