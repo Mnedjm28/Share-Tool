@@ -29,25 +29,28 @@ namespace ShareTool.Controllers
             catch (Exception ex)
             {
                 throw ex;
-            }            
+            }
         }
 
+        [Authorize(Roles = "Admin")]
         //[HandleError] //Could handle errors only in this action
         public ActionResult Create() {
             var heyMessage = "";
-            if(TempData.ContainsKey("HeyMessage"))
-                heyMessage= TempData["HeyMessage"].ToString();
+            if (TempData.ContainsKey("HeyMessage"))
+                heyMessage = TempData["HeyMessage"].ToString();
 
             TempData.Keep();
             return View();
         }
 
+        [Authorize(Roles = "Admin")]
         [HttpPost]
-        public ActionResult Create([Bind (Include ="Name, Quantity", Exclude ="Description")] Tool sharedTool) {
-            if(!ModelState.IsValid) { return View(sharedTool); }
-            var name = sharedTool.Name;
-            var description = sharedTool.Description;
-            var quantity = sharedTool.Quantity;
+        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] Tool sharedTool) {
+            if (!ModelState.IsValid) { return View(sharedTool); }
+
+            var toolRepository = new ToolRepository();
+            await toolRepository.Add(sharedTool);
+
             return RedirectToAction("Index");
         }
 
@@ -60,6 +63,7 @@ namespace ShareTool.Controllers
         //    return RedirectToAction("Index");
         //}
 
+        [Authorize]
         public ActionResult RequestTool() {
             return Content("تم ظلب الأداة");
         }
