@@ -5,18 +5,18 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="f7896f47ff7f4fa9af4d7c19a915f045" Name="Diagram1">
-        <EntityTypeShape EntityType="SharedToolModel.Tool" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
         <EntityTypeShape EntityType="SharedToolModel.C__MigrationHistory" Width="1.5" PointX="9.375" PointY="0.75" />
-        <EntityTypeShape EntityType="SharedToolModel.AspNetRole" Width="1.5" PointX="5.375" PointY="7.5" />
-        <EntityTypeShape EntityType="SharedToolModel.AspNetUserClaim" Width="1.5" PointX="9.875" PointY="6" />
-        <EntityTypeShape EntityType="SharedToolModel.AspNetUserLogin" Width="1.5" PointX="9.875" PointY="8.75" />
-        <EntityTypeShape EntityType="SharedToolModel.AspNetUser" Width="1.5" PointX="7.625" PointY="6.375" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetRole" Width="1.5" PointX="0.75" PointY="4.125" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetUserClaim" Width="1.5" PointX="5.25" PointY="8.125" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetUserLogin" Width="1.5" PointX="5.25" PointY="2.625" />
+        <EntityTypeShape EntityType="SharedToolModel.AspNetUser" Width="1.5" PointX="3" PointY="2.875" />
+        <EntityTypeShape EntityType="SharedToolModel.BorrowedTool" Width="1.5" PointX="8.25" PointY="3.875" />
+        <EntityTypeShape EntityType="SharedToolModel.Tool" Width="1.5" PointX="6" PointY="11.875" />
         <AssociationConnector Association="SharedToolModel.FK_dbo_AspNetUserClaims_dbo_AspNetUsers_UserId" />
         <AssociationConnector Association="SharedToolModel.FK_dbo_AspNetUserLogins_dbo_AspNetUsers_UserId" />
-        <AssociationConnector Association="SharedToolModel.AspNetUserRoles" />
-        <EntityTypeShape EntityType="SharedToolModel.BorrowedTool" Width="1.5" PointX="12.875" PointY="7.375" />
         <AssociationConnector Association="SharedToolModel.FK_BorrowedTool_AspNetUsers" />
         <AssociationConnector Association="SharedToolModel.FK_BorrowedTool_Tool" />
+        <AssociationConnector Association="SharedToolModel.AspNetUserRoles" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
