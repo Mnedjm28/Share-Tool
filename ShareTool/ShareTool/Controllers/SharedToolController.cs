@@ -34,7 +34,8 @@ namespace ShareTool.Controllers
 
         [Authorize(Roles = "Admin")]
         //[HandleError] //Could handle errors only in this action
-        public ActionResult Create() {
+        public ActionResult Create()
+        {
             var heyMessage = "";
             if (TempData.ContainsKey("HeyMessage"))
                 heyMessage = TempData["HeyMessage"].ToString();
@@ -45,11 +46,36 @@ namespace ShareTool.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] Tool sharedTool) {
+        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] Tool sharedTool, HttpPostedFileBase file)
+        {
             if (!ModelState.IsValid) { return View(sharedTool); }
 
             var toolRepository = new ToolRepository();
-            await toolRepository.Add(sharedTool);
+            string path = null;
+            var tool = new Tool()
+            {
+                Name = sharedTool.Name,
+                Description = sharedTool.Description,
+                Quantity = sharedTool.Quantity,
+            };
+
+            if (file != null)
+            {
+                var imageFileName = System.IO.Path.GetFileName(file.FileName);
+                path = System.IO.Path.Combine(Server.MapPath("~/Images"), imageFileName);
+                file.SaveAs(path);
+                tool.ImageUrl = "/Images/" + imageFileName;
+            }
+            try
+            {
+                await toolRepository.Add(tool);
+            }
+            catch (Exception ex)
+            {
+                if (path != null)
+                    System.IO.File.Delete(path);
+                throw ex;
+            }
 
             return RedirectToAction("Index");
         }
@@ -64,7 +90,8 @@ namespace ShareTool.Controllers
         //}
 
         [Authorize]
-        public ActionResult RequestTool() {
+        public ActionResult RequestTool()
+        {
             return Content("تم ظلب الأداة");
         }
     }

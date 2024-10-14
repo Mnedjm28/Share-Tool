@@ -168,6 +168,9 @@
   <data name="Home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>Image</value>
+  </data>
   <data name="LocalAccountToLogin" xml:space="preserve">
     <value>Use a local account to log in.</value>
   </data>

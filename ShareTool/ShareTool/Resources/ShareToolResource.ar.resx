@@ -168,6 +168,9 @@
   <data name="Home" xml:space="preserve">
     <value>الرئيسية</value>
   </data>
+  <data name="Image" xml:space="preserve">
+    <value>صورة</value>
+  </data>
   <data name="LocalAccountToLogin" xml:space="preserve">
     <value>استخدم حسابًا محليًا لتسجيل الدخول.</value>
   </data>
