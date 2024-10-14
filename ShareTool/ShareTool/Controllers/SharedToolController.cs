@@ -12,7 +12,6 @@ namespace ShareTool.Controllers
     [HandleError]
     public class SharedToolController : Controller
     {
-        // GET: Sharedtool
         public async Task<ActionResult> Index()
         {
             try
@@ -33,7 +32,7 @@ namespace ShareTool.Controllers
         }
 
         [Authorize(Roles = "Admin")]
-        //[HandleError] //Could handle errors only in this action
+        [HandleError]
         public ActionResult Create()
         {
             var heyMessage = "";
@@ -46,7 +45,7 @@ namespace ShareTool.Controllers
 
         [Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] Tool sharedTool, HttpPostedFileBase file)
+        public async Task<ActionResult> Create([Bind(Include = "Name, Quantity", Exclude = "Description")] /*FormCollection*/ Tool sharedTool , HttpPostedFileBase file)
         {
             if (!ModelState.IsValid) { return View(sharedTool); }
 
@@ -79,15 +78,6 @@ namespace ShareTool.Controllers
 
             return RedirectToAction("Index");
         }
-
-        //[HttpPost]
-        //public ActionResult Create([Bind (Include ="Name, Quantity", Exclude ="Description")] FormCollection values) {
-        //    if(!ModelState.IsValid) { return View(values); }
-        //    var name = values[nameof(SharedTool.Name)];
-        //    var description = values[nameof(SharedTool.Description)];
-        //    var quantity = values[nameof(SharedTool.Quantity)];
-        //    return RedirectToAction("Index");
-        //}
 
         [Authorize]
         public ActionResult RequestTool()
