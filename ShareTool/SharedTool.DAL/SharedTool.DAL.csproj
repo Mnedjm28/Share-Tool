@@ -53,9 +53,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Address.cs">
-      <DependentUpon>SharedToolModel.tt</DependentUpon>
-    </Compile>
     <Compile Include="AspNetRole.cs">
       <DependentUpon>SharedToolModel.tt</DependentUpon>
     </Compile>
@@ -91,9 +88,6 @@
       <DependentUpon>SharedToolModel.edmx</DependentUpon>
     </Compile>
     <Compile Include="Tool.cs">
-      <DependentUpon>SharedToolModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="User.cs">
       <DependentUpon>SharedToolModel.tt</DependentUpon>
     </Compile>
   </ItemGroup>
