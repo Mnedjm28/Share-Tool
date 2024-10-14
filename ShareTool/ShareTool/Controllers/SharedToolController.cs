@@ -1,7 +1,9 @@
-﻿using ShareTool.Models;
+﻿using SharedTool.Business;
+using SharedTool.DAL;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 
@@ -10,20 +12,24 @@ namespace ShareTool.Controllers
     [HandleError]
     public class SharedToolController : Controller
     {
-        public List<SharedTool> sharedTools = new List<SharedTool>()
-            {
-                new SharedTool("غسالة","غسالة مستعملة بحالة مية بالمية", 1, "/Images/washingMachine.jpg"),
-                new SharedTool("دراجة","دراجة هوائية كبيرة الحجم يمكن استخدامه ", 4, "/Images/bicycle.png"),
-                new SharedTool("تلفاز","تلفاز مكسور النصف العلوي من شاشته", 2, "/Images/lcd.jpg"),
-                new SharedTool("كمبيوتر","كمبيوتر بمعالج i5 بحالة جيدة", 0, "/Images/laptop.jpg"),
-            };
         // GET: Sharedtool
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-            ViewBag.UserName = "نجم الدين";
-            ViewData["FirstName"] = "نجم الدين";
-            TempData["HeyMessage"] = "مرحبا";
-            return View(sharedTools);
+            try
+            {
+                ViewBag.UserName = "نجم الدين";
+                ViewData["FirstName"] = "نجم الدين";
+                TempData["HeyMessage"] = "مرحبا";
+
+                ToolRepository toolRepository = new ToolRepository();
+                var tools = await toolRepository.GetAllTools();
+                return View(tools);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }            
         }
 
         //[HandleError] //Could handle errors only in this action
@@ -37,7 +43,7 @@ namespace ShareTool.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create([Bind (Include ="Name, Quantity", Exclude ="Description")] SharedTool sharedTool) {
+        public ActionResult Create([Bind (Include ="Name, Quantity", Exclude ="Description")] Tool sharedTool) {
             if(!ModelState.IsValid) { return View(sharedTool); }
             var name = sharedTool.Name;
             var description = sharedTool.Description;

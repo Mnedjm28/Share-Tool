@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ShareTool.Models.SharedTool>
+﻿@model IEnumerable<SharedTool.DAL.Tool>
 
 @{
     //Layout = null;
@@ -35,7 +35,7 @@
         {
             <div class="col-md-6 text-center">
                 <div class="col-md-12">
-                    <img src="@item.ImagePath" />
+                    <img src="@item.ImageUrl" />
                 </div>
                 <h4>@Html.DisplayFor(modelItem => item.Name)</h4>
 
