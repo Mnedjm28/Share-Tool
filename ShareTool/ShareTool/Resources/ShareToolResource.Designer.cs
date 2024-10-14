@@ -8,10 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Resources {
+namespace Resources
+{
     using System;
-    
-    
+
+
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,184 +23,257 @@ namespace Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class ShareToolResource {
-        
+    public class ShareToolResource
+    {
+
         private static global::System.Resources.ResourceManager resourceMan;
-        
+
         private static global::System.Globalization.CultureInfo resourceCulture;
-        
+
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal ShareToolResource() {
+        internal ShareToolResource()
+        {
         }
-        
+
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager {
-            get {
-                if (object.ReferenceEquals(resourceMan, null)) {
+        public static global::System.Resources.ResourceManager ResourceManager
+        {
+            get
+            {
+                if (object.ReferenceEquals(resourceMan, null))
+                {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("ShareTool.Resources.ShareToolResource", typeof(ShareToolResource).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-        
+
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture {
-            get {
+        public static global::System.Globalization.CultureInfo Culture
+        {
+            get
+            {
                 return resourceCulture;
             }
-            set {
+            set
+            {
                 resourceCulture = value;
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to About Us.
+        /// </summary>
+        public static string AboutUs
+        {
+            get
+            {
+                return ResourceManager.GetString("AboutUs", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Back to List.
         /// </summary>
-        public static string BackToList {
-            get {
+        public static string BackToList
+        {
+            get
+            {
                 return ResourceManager.GetString("BackToList", resourceCulture);
             }
         }
-        
+
+        /// <summary>
+        ///   Looks up a localized string similar to Confirm password.
+        /// </summary>
+        public static string ConfirmPassword
+        {
+            get
+            {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+
+        /// <summary>
+        ///   Looks up a localized string similar to Contact Us.
+        /// </summary>
+        public static string ContactUs
+        {
+            get
+            {
+                return ResourceManager.GetString("ContactUs", resourceCulture);
+            }
+        }
+
         /// <summary>
         ///   Looks up a localized string similar to Create new.
         /// </summary>
-        public static string CreateNew {
-            get {
+        public static string CreateNew
+        {
+            get
+            {
                 return ResourceManager.GetString("CreateNew", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
-        public static string Delete {
-            get {
+        public static string Delete
+        {
+            get
+            {
                 return ResourceManager.GetString("Delete", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Description.
         /// </summary>
-        public static string Description {
-            get {
+        public static string Description
+        {
+            get
+            {
                 return ResourceManager.GetString("Description", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        public static string Details {
-            get {
+        public static string Details
+        {
+            get
+            {
                 return ResourceManager.GetString("Details", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
-        public static string Edit {
-            get {
+        public static string Edit
+        {
+            get
+            {
                 return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        public static string Errors_Error {
-            get {
+        public static string Errors_Error
+        {
+            get
+            {
                 return ResourceManager.GetString("Errors.Error", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to An error occurred while processing your request..
         /// </summary>
-        public static string Errors_WhileProcessingRequest {
-            get {
+        public static string Errors_WhileProcessingRequest
+        {
+            get
+            {
                 return ResourceManager.GetString("Errors.WhileProcessingRequest", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to This field is required..
         /// </summary>
-        public static string FieldRequired {
-            get {
+        public static string FieldRequired
+        {
+            get
+            {
                 return ResourceManager.GetString("FieldRequired", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Developed by NEDJM EDDINE AHMED.
         /// </summary>
-        public static string Footer {
-            get {
+        public static string Footer
+        {
+            get
+            {
                 return ResourceManager.GetString("Footer", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Hello.
         /// </summary>
-        public static string Hello {
-            get {
+        public static string Hello
+        {
+            get
+            {
                 return ResourceManager.GetString("Hello", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Home.
         /// </summary>
-        public static string Home {
-            get {
+        public static string Home
+        {
+            get
+            {
                 return ResourceManager.GetString("Home", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Name.
         /// </summary>
-        public static string Name {
-            get {
+        public static string Name
+        {
+            get
+            {
                 return ResourceManager.GetString("Name", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Quantity.
         /// </summary>
-        public static string Quantity {
-            get {
+        public static string Quantity
+        {
+            get
+            {
                 return ResourceManager.GetString("Quantity", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Request.
         /// </summary>
-        public static string Request {
-            get {
+        public static string Request
+        {
+            get
+            {
                 return ResourceManager.GetString("Request", resourceCulture);
             }
         }
-        
+
         /// <summary>
         ///   Looks up a localized string similar to Share Tool.
         /// </summary>
-        public static string ShareTool {
-            get {
+        public static string ShareTool
+        {
+            get
+            {
                 return ResourceManager.GetString("ShareTool", resourceCulture);
             }
         }

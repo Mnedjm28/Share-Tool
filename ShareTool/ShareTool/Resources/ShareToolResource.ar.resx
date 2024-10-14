@@ -117,8 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AboutUs" xml:space="preserve">
+    <value>عن الموقع</value>
+  </data>
   <data name="BackToList" xml:space="preserve">
     <value>العودة إلى القائمة</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>تأكيد كلمة المرور</value>
+  </data>
+  <data name="ContactUs" xml:space="preserve">
+    <value>إتصل بنا</value>
   </data>
   <data name="CreateNew" xml:space="preserve">
     <value>إضافة جديد</value>
