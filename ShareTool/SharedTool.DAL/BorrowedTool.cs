@@ -18,6 +18,7 @@ namespace SharedTool.DAL
         public string UserId { get; set; }
         public int ToolId { get; set; }
         public System.DateTime Date { get; set; }
+        public bool approved { get; set; }
     
         public virtual AspNetUser AspNetUser { get; set; }
         public virtual Tool Tool { get; set; }
