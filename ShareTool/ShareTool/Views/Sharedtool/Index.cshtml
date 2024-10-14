@@ -58,7 +58,7 @@
                     }
 
                     @Html.ActionLink(Resources.ShareToolResource.Details, "Details", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-secondary" })
-                    @Html.ActionLink(Resources.ShareToolResource.Request, "RequestTool", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-success" })
+                    @Html.ActionLink(Resources.ShareToolResource.Request, "RequestTool", new { id = item.Id }, new { @class = "btn btn-outline-success" })
                 </p>
             </div>
         }
