@@ -2,6 +2,7 @@
 using SharedTool.DAL;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -12,6 +13,7 @@ namespace ShareTool.Controllers
     [HandleError]
     public class SharedToolController : Controller
     {
+        private ToolRepository _toolRepository { get; set; } = new ToolRepository();
         public async Task<ActionResult> Index()
         {
             try
@@ -49,7 +51,6 @@ namespace ShareTool.Controllers
         {
             if (!ModelState.IsValid) { return View(sharedTool); }
 
-            var toolRepository = new ToolRepository();
             string path = null;
             var tool = new Tool()
             {
@@ -60,14 +61,14 @@ namespace ShareTool.Controllers
 
             if (file != null)
             {
-                var imageFileName = System.IO.Path.GetFileName(file.FileName);
-                path = System.IO.Path.Combine(Server.MapPath("~/Images"), imageFileName);
+                var imageFileName = Path.GetFileName(file.FileName);
+                path = Path.Combine(Server.MapPath("~/Images"), imageFileName);
                 file.SaveAs(path);
                 tool.ImageUrl = "/Images/" + imageFileName;
             }
             try
             {
-                await toolRepository.Add(tool);
+                await _toolRepository.Add(tool);
             }
             catch (Exception ex)
             {
@@ -78,6 +79,19 @@ namespace ShareTool.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [Authorize]
+        public async Task<ActionResult> Delete(int id)
+        {
+            var imageUrl =  await _toolRepository.Delete(id);
+            if(imageUrl != null)
+            {
+                imageUrl = imageUrl.Replace("/Images/", string.Empty);
+                System.IO.File.Delete(Path.Combine(Server.MapPath("~/Images"), imageUrl));
+            }
+            return RedirectToAction("Index");
+        }
+
 
         [Authorize]
         public ActionResult RequestTool()

@@ -29,12 +29,13 @@ namespace SharedTool.Business
             await context.SaveChangesAsync();
         }
 
-        public async Task Delete(int id)
+        public async Task<string> Delete(int id)
         {
             var context = new SharedToolDb();
             var tool = await context.Tools.FindAsync(id);
             context.Tools.Remove(tool);
             await context.SaveChangesAsync();
+            return tool.ImageUrl;
         }
 
         public async Task Update(Tool tool)

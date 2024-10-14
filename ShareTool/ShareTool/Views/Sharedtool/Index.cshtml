@@ -53,7 +53,7 @@
                         if (User.IsInRole("Admin"))
                         {
                             @Html.ActionLink(Resources.ShareToolResource.Edit, "Edit", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-primary" })
-                            @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { /* id=item.PrimaryKey */ }, new { @class = "btn btn-outline-danger" })
+                            @Html.ActionLink(Resources.ShareToolResource.Delete, "Delete", new { id= item.Id  }, new { @class = "btn btn-outline-danger" })
                         }
                     }
 
