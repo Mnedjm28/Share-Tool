@@ -29,7 +29,7 @@ namespace ShareTool
                 admineRole.Name = "Admin";
                 roleManager.Create(admineRole);
 
-                var adminUser = new ApplicationUser() { UserName = "admin", Email = "admin@test.test" };
+                var adminUser = new ApplicationUser() { UserName = "admin@test.test", Email = "admin@test.test" };
                 var result = userManager.Create(adminUser, password:"aZ123456-");
 
                 if(result.Succeeded)
