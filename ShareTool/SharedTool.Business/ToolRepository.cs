@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace SharedTool.Business
 {
-    class ToolRepository
+    public class ToolRepository
     {
         public async Task<List<Tool>> GetAllTools()
         {
