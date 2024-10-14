@@ -53,6 +53,11 @@
   <ItemGroup>
     <Compile Include="BorrowedToolRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resources\SharedTool.Business.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SharedTool.Business.resx</DependentUpon>
+    </Compile>
     <Compile Include="ToolRepository.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +69,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\SharedTool.Business.ar.resx" />
+    <EmbeddedResource Include="Resources\SharedTool.Business.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>SharedTool.Business.Designer.cs</LastGenOutput>
+      <CustomToolNamespace>Resources</CustomToolNamespace>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
