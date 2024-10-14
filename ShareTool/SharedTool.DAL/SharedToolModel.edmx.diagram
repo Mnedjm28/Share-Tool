@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f7896f47ff7f4fa9af4d7c19a915f045" Name="Diagram1">
+        <EntityTypeShape EntityType="SharedToolModel.Address" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="SharedToolModel.BorrowedTool" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SharedToolModel.Tool" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="SharedToolModel.User" Width="1.5" PointX="6.625" PointY="2.625" IsExpanded="true" />
+        <AssociationConnector Association="SharedToolModel.FK_Address_User" ManuallyRouted="false" />
+        <AssociationConnector Association="SharedToolModel.FK_BorrowedTool_Tool" ManuallyRouted="false" />
+        <AssociationConnector Association="SharedToolModel.FK_BorrowedTool_User" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
