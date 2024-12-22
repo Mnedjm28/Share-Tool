@@ -130,16 +130,7 @@ namespace Resources
                 return ResourceManager.GetString("ContactUs", resourceCulture);
             }
         }
-
-        /// <summary>
-        ///   Looks up a localized string similar to Confirm password.
-        /// </summary>
-        public static string ConfirmPassword {
-            get {
-                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
-            }
-        }
-        
+                
         /// <summary>
         ///   Looks up a localized string similar to Create new.
         /// </summary>
